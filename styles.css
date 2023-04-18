@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    margin: 30px;
+    background: rgb(111, 229, 245);
+
+}
+#resultado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 30px 10px;
+}
