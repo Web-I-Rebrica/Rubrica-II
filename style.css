@@ -16,17 +16,25 @@
     margin-top: 20px;
   }
 
+  .select-container {
+    width: 40%;
+  }
+
   .column {
-    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 470px);
+    margin: auto;
+    grid-template-columns: repeat(4, 420px);
     margin-top: 10px;
   }
 
 /* resposive columns */
 @media screen and (max-width: 800px) {
   .column {
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
