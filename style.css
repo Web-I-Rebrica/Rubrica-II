@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp1822725.png&f=1&nofb=1&ipt=01379c90940bdb74414dbe17a9b2437b94be2c242aea6813f0aaa039f75b0622&ipo=images");
+       
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .column {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 470px);
+    margin-top: 10px;
+  }
+
+/* resposive columns */
+@media screen and (max-width: 800px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+}
+
