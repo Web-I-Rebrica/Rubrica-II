@@ -15,20 +15,21 @@ function showCharacters(personajes) {
 
   personajes.forEach(personaje => {
     const div = document.createRange().createContextualFragment(`
-      <div class="col-sm-3 mb-3 mb-sm-0 mt-4" data-name="${personaje.name}">
-        <div class="card">
-          <div class="card-body">
-            <h6 class="card-tittle">${personaje.name}</h6>
-          </div>
-          <img src="${personaje.image}" class="card-img-bottom">
-        </div>
+      <div class="card booking-card mt-2 mb-4 rounded-bottom" data-name="${personaje.name}">
+      <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+        <img src="${personaje.image}" class="img-fluid">
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
       </div>
-    `);
+      <div class="card-body">
+      <h4 class="card-title font-weight-bold"><a>${personaje.name}</a></h4>
+      `);
 
     main.append(div);
   });
 
-  createSelect([{ name: 'Mostrar todos' }, ...personajes]);
+  createSelect([{ name: 'Todos' }, ...personajes]);
 }
 
 function createSelect(personajes) {
@@ -46,9 +47,9 @@ function createSelect(personajes) {
     const selectedName = select.value;
 
 
-    const tarjetas = document.querySelectorAll('.column > .col-sm-3');
+    const tarjetas = document.querySelectorAll('.column > .card');
     tarjetas.forEach(tarjeta => {
-      tarjeta.style.display = (tarjeta.dataset.name === selectedName || selectedName === 'Mostrar todos') ? 'block' : 'none';
+      tarjeta.style.display = (tarjeta.dataset.name === selectedName || selectedName === 'Todos') ? 'block' : 'none';
     });
   });
 }
